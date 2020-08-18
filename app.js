@@ -84,5 +84,5 @@ app.post('/paymemt', (req, res) => {
 const server_port = process.env.PORT || 80;
 const server_host = process.env.HOST || '0.0.0.0';
 app.listen(server_port, () => {
-  console.log(`Server started on port ${port}`);
+  console.log(`Server started on port ${server_port}`);
 });
