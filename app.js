@@ -80,7 +80,9 @@ app.post('/paymemt', (req, res) => {
 });
 
 // server
-const port = process.env.PORT || 5001;
-app.listen(port, () => {
+
+const server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+const server_host = process.env.YOUR_HOST || '0.0.0.0';
+app.listen(server_port, server_host, () => {
   console.log(`Server started on port ${port}`);
 });

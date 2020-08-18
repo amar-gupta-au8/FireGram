@@ -35,7 +35,7 @@ export const Payment = async (body) => {
   };
   try {
     const response = await fetch(
-      `${process.env.PORT || 'http://localhost:5001'}/paymemt`,
+      `${process.env.PORT || 'http://localhost:80'}/paymemt`,
       {
         method: 'POST',
         headers,
