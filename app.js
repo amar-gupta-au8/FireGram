@@ -32,10 +32,6 @@ const transporter = nodemailer.createTransport(
   // }
 );
 
-// // routes=>
-// app.get('/', (req, res) => {
-//   res.send('i am working');
-// });
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
   app.get('*', (req, res) => {
@@ -82,7 +78,7 @@ app.post('/paymemt', (req, res) => {
 // server
 
 const server_port = process.env.PORT || 80;
-const server_host = process.env.HOST || '0.0.0.0';
+const server_host = localhost || '0.0.0.0';
 app.listen(server_port, () => {
   console.log(`Server started on port ${server_port}`);
 });

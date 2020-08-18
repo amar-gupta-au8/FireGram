@@ -35,7 +35,7 @@ export const Payment = async (body) => {
   };
   try {
     const response = await fetch(
-      `${process.env.PORT || 'http://localhost:80'}/paymemt`,
+      `${'https://stream-em-all.herokuapp.com'}/paymemt`,
       {
         method: 'POST',
         headers,
