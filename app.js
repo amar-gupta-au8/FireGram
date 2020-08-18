@@ -32,13 +32,13 @@ const transporter = nodemailer.createTransport(
   // }
 );
 
-// routes=>
-app.get('/', (req, res) => {
-  res.send('i am working');
-});
+// // routes=>
+// app.get('/', (req, res) => {
+//   res.send('i am working');
+// });
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.get('/*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
@@ -82,7 +82,7 @@ app.post('/paymemt', (req, res) => {
 // server
 
 const server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-const server_host = process.env.YOUR_HOST || '0.0.0.0';
+const server_host = process.env.HOST || '0.0.0.0';
 app.listen(server_port, server_host, () => {
   console.log(`Server started on port ${port}`);
 });
