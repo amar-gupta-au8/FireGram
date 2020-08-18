@@ -66,7 +66,6 @@ app.post('/paymemt', (req, res) => {
       };
 
       transporter.sendMail(mailOptions, function (error, info) {
-        console.log('error1>', error);
         if (error) {
           console.log(error);
         }

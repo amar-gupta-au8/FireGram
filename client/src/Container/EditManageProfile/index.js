@@ -48,7 +48,7 @@ const EditManageProfile = ({ history, currentUser, userProfile, profiles }) => {
   const handleClick = (img, data, docid) => {
     setProfile({ img: img, profile: data, docid: docid });
   };
-  console.log(profiles);
+
   if (!currentUser) {
     return <Redirect to='/signin' />;
   }
@@ -85,14 +85,7 @@ const EditManageProfile = ({ history, currentUser, userProfile, profiles }) => {
             </Grid>
           ))}
           {profiles.length < 4 && (
-            <Grid
-              item
-              
-              lg={3}
-              className={classes.row}
-              sm={3}
-              id='editmainimage'
-            >
+            <Grid item lg={3} className={classes.row} sm={3} id='editmainimage'>
               <div
                 id='editicon'
                 style={{
