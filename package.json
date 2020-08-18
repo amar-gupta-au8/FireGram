@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app.js",
+    "start": "node app.js",
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
@@ -26,6 +26,7 @@
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "nodemailer": "^6.4.11",
+    "path": "^0.12.7",
     "stripe": "^8.76.0",
     "uuid": "^8.3.0"
   },
