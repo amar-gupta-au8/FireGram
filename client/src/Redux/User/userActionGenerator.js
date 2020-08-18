@@ -35,7 +35,7 @@ export const Payment = async (body) => {
   };
   try {
     const response = await fetch(
-      `${'https://stream-em-all.herokuapp.com'}/paymemt`,
+      `https://stream-em-all.herokuapp.com/paymemt`,
       {
         method: 'POST',
         headers,
